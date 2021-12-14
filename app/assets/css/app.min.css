@@ -1,0 +1,1 @@
+.transaction-overlay{position:absolute;width:100%;height:100%;top:0;left:0;background-color:#fff;display:flex;opacity:0;visibility:hidden;align-items:center;justify-content:center}.transaction-overlay.active{opacity:.6;visibility:visible}

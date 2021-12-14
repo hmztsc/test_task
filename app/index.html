@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="./assets/css/app.min.css" rel="stylesheet">
+</head>
+<body>
+
+   <!-- Container -->
+   <div class="container-fluid">
+
+      <!-- Row -->
+      <div class="row">
+
+         <!-- Col -->
+         <div class="col-12 col-lg-4 my-3">
+
+            <div class="row mb-3">
+               <div class="col">
+                  <h1>Insert Data</h1>
+               </div>
+            </div>
+
+            <div class="row gy-4">
+               <div class="col-12">
+                  <!-- Form A -->
+                  <form action="actions/tableA_create.php" method="POST" id="formA">
+      
+                     <div class="row gy-3">
+                        <div class="col-12">
+                           <h5>Table A</h5>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                              <label for="name">Name</label>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" onpaste="return false" ondrop="return false" required maxlength="15">
+                              <label for="phone">Phone</label>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="date" name="birthdate" class="form-control" id="birthdate" placeholder="Birthdate" required>
+                              <label for="birthdate">Birthdate</label>
+                           </div>
+                        </div>
+
+                        <div class="col-12">
+                           <label for="" class="mb-3">Active ?</label>
+                           <div class="d-flex">
+
+                              <div class="form-check me-3">
+                                 <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="1" checked>
+                                 <label class="form-check-label" for="exampleRadios1">
+                                    Yes
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="0">
+                                 <label class="form-check-label" for="exampleRadios2">
+                                    No
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+      
+                        <div class="col text-end">
+                           <input type="submit" class="btn btn-success" value="Create">
+                        </div>
+                     </div>
+                  </form>
+                  <!-- Form A End -->
+               </div>
+               <div class="col-12">
+                  <!-- Form B -->
+                  <form action="actions/tableB_create.php" method="POST" id="formB">
+
+                     <div class="row gy-3">
+                        <div class="col-12">
+                           <h5>Table B</h5>
+                        </div>
+                        
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" onpaste="return false" ondrop="return false" required maxlength="15">
+                              <label for="phone">Phone</label>
+                           </div>
+                        </div>
+
+                        <div class="col-12 text-end">
+                           <input type="submit" class="btn btn-success" value="Create">
+                        </div>
+                     </div>
+                  </form>
+                  <!-- Form B End -->
+               </div>
+               <div class="col-12">
+                  <!-- Form C -->
+                  <form action="actions/tableC_create.php" method="POST" id="formC">
+      
+                     <div class="row gy-3">
+                        <div class="col-12">
+                           <h5>Table C</h5>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                              <label for="name">Name</label>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" onpaste="return false" ondrop="return false" required maxlength="15">
+                              <label for="phone">Phone</label>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-floating">
+                              <input type="date" name="birthdate" class="form-control" id="birthdate2" placeholder="Birthdate" required>
+                              <label for="birthdate2">Birthdate</label>
+                           </div>
+                        </div>
+
+                        <div class="col-12">
+                           <label for="" class="mb-3">Active ?</label>
+                           <div class="d-flex">
+
+                              <div class="form-check me-3">
+                                 <input class="form-check-input" type="radio" name="status" id="exampleRadios3" value="1" checked>
+                                 <label class="form-check-label" for="exampleRadios3">
+                                    Yes
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="radio" name="status" id="exampleRadios4" value="0">
+                                 <label class="form-check-label" for="exampleRadios4">
+                                    No
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+      
+                        <div class="col-12 text-end">
+                           <input type="submit" class="btn btn-success" value="Create">
+                        </div>
+                     </div>
+                  </form>
+                  <!-- Form C End -->
+                  
+               </div>
+            </div>
+         </div>
+         <!-- Col End -->
+
+         <!-- Col -->
+         <div class="col-12 col-lg-8 my-3">
+
+            <div class="row mb-3">
+               <div class="col">
+                  <h1>Show Data</h1>
+               </div>
+            </div>
+
+            <!-- Inputs End -->
+            <div class="row gy-3">
+               <div class="col-12">
+                  <h5>Options : </h5>
+               </div>
+               
+               <div class="col-12 col-4">
+                  
+                  <!-- Buttons -->
+                  <div class="row gy-3">
+                     
+                     <!-- Button 1 -->
+                     <div class="col-12 col-lg">
+                        <button type="button" class="btn btn-secondary w-100" id="btn1">Show A</button>
+                     </div>
+                     <!-- Button 1 End -->
+                     
+                     <!-- Button 2 -->
+                     <div class="col-12 col-lg">
+                        <button type="button" class="btn btn-secondary w-100" id="btn2">Show ABC</button>
+                     </div>
+                     <!-- Button 2 End -->
+                     
+                     <!-- Button 3 -->
+                     <div class="col-12 col-lg">
+                        <button type="button" class="btn btn-secondary w-100" id="btn3">SHOW CB</button>
+                     </div>
+                     <!-- Button 3 End -->
+                     
+                     <!-- Button 4 -->
+                     <div class="col-12 col-lg">
+                        <button type="button" class="btn btn-secondary w-100" id="btn4">SHOW B ASC</button>
+                     </div>
+                     <!-- Button 4 End -->
+                     
+                     <!-- Button 5 -->
+                     <div class="col-12 col-lg">
+                        <button type="button" class="btn btn-secondary w-100" id="btn5">SHOW B DESC</button>
+                     </div>
+                     <!-- Button 5 End -->
+                     
+                  </div>
+                  <!-- Buttons End -->
+               </div>
+
+               <div class="col-12" id="tableContent">
+                  <div class="row gy-3 d-none tableContentItem" id="table1">
+                     <div class="col-12">
+                        <h3 class="mb-3">Table A</h3>
+                        <table class="table table-hover"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Name</th>
+                                 <th>Phone</th>
+                                 <th>Birthdate</th>
+                                 <th>Create</th>
+                                 <th>Status</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                     </div>
+                  </div>
+                  <div class="row gy-3 d-none tableContentItem" id="table2">
+                     <div class="col-12">
+                        <h3 class="mb-3">Table A</h3>
+                        <table class="table table-hover" id="formA_table"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Name</th>
+                                 <th>Phone</th>
+                                 <th>Birthdate</th>
+                                 <th>Create</th>
+                                 <th>Status</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                        <h3 class="mb-3">Table B</h3>
+                        <table class="table table-hover" id="formB_table"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Phone</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                        <h3 class="mb-3">Table C</h3>
+                        <table class="table table-hover" id="formC_table"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Name</th>
+                                 <th>Phone</th>
+                                 <th>Birthdate</th>
+                                 <th>Create</th>
+                                 <th>Status</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                     </div>
+                  </div>
+                  <div class="row gy-3 d-none tableContentItem" id="table3">
+                     <div class="col-12">
+                        <h3 class="mb-3">Table C</h3>
+                        <table class="table table-hover"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Name</th>
+                                 <th>Phone</th>
+                                 <th>Birthdate</th>
+                                 <th>Create</th>
+                                 <th>Status</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                        <h3 class="mb-3">Table B</h3>
+                        <table class="table table-hover"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Phone</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                     </div>
+                  </div>
+                  <div class="row gy-3 d-none tableContentItem" id="table4">
+                     <div class="col-12">
+                        <h3 class="mb-3">Table B ASC</h3>
+                        <table class="table table-hover"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Phone</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                     </div>
+                  </div>
+                  <div class="row gy-3 d-none tableContentItem" id="table5">
+                     <div class="col-12">
+                        <h3 class="mb-3">Table B DESC</h3>
+                        <table class="table table-hover"> 
+                           <thead> 
+                              <tr class="table-dark"> 
+                                 <th width="1">#</th>
+                                 <th>Phone</th>
+                              </tr> 
+                           </thead> 
+                           <tbody></tbody> 
+                        </table>
+                     </div>
+                  </div>
+
+
+               </div>
+
+            </div>
+      
+         </div>
+         <!-- Col End -->
+      </div>
+      <!-- Row End -->
+   </div>
+   <!-- Container End -->
+
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+   <script src="assets/js/app.min.js"></script>
+</body>
+</html>
